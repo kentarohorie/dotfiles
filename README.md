@@ -23,3 +23,15 @@ vim --version | grep clipnoard
 
 https://vimawesome.com
 
+## Yank to Clipboard
+
+Check your vim config
+
+```
+vim --version | grep clipboard
+```
+
+if '-clipboard'
+
+you should install newer version vim.
+

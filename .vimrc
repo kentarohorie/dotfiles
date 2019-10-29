@@ -17,10 +17,9 @@ set guioptions+=a
 set smartindent
 set title
 set clipboard=unnamed,autoselect
+set backspace=indent,eol,start " for using delete on newer vim
 set cursorline
 set wildmode=list:longest
-
-set list
 
 inoremap <silent> jj <ESC>
 
