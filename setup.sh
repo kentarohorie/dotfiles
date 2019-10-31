@@ -1,4 +1,6 @@
 #!/bin/bash
 
-ln -s ~/.vim/.vimrc ~/.vimrc
+ln -s ~/dotfiles/vim/vimrc ~/.vimrc
+ln -s ~/dotfiles/vim ~/.vim
+ln -s ~/dotfiles/screenrc ~/.screenrc
 

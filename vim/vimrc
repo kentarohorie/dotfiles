@@ -1,7 +1,6 @@
 colorscheme iceberg
 
-filetype plugin on
-
+filetype plugin on 
 syntax on
 
 set number
@@ -20,6 +19,7 @@ set clipboard=unnamed,autoselect
 set backspace=indent,eol,start " for using delete on newer vim
 set cursorline
 set wildmode=list:longest
+set whichwrap=b,s,h,l,<,>,[,]
 
 inoremap <silent> jj <ESC>
 
@@ -51,6 +51,9 @@ nnoremap <Leader>p :<C-u>Files<CR>
 nnoremap <Leader>o :<C-u>Ex<CR>
 nnoremap <Leader>s :<C-u>w<CR>
 nnoremap <Leader>q :<C-u>q<CR>
+nnoremap <S-l> $
+nnoremap <S-h> ^
+nnoremap x "_x
 
 let g:indent_guides_enable_on_vim_startup = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
