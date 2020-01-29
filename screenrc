@@ -13,8 +13,12 @@ startup_message off
 # logging
 log on
 deflog on
-logfile "~/screen/log/screen-%Y%m%d-%n.log"
+logfile "/var/log/screen-%Y%m%d-%n.log"
 
 # Show date and screen list
 hardstatus alwayslastline "%{= rw} %H %{= wk}%-Lw%{= bw}%n%f* %t%{= wk}%+Lw %{= wk}%=%{= gk} %y/%m/%d %c "
+
+# Set bufferfile
+
+bufferfile '/tmp/screen-exchange'
 
