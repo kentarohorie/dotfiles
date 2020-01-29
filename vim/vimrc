@@ -1,7 +1,7 @@
 colorscheme iceberg
 
 filetype plugin on 
-syntax on
+" syntax on
 
 set number
 set expandtab
@@ -17,7 +17,7 @@ set smartindent
 set title
 set clipboard=unnamed,autoselect
 set backspace=indent,eol,start " for using delete on newer vim
-set cursorline
+" set cursorline カーソル移動遅い原因
 set wildmode=list:longest
 set whichwrap=b,s,h,l,<,>,[,]
 
@@ -26,23 +26,35 @@ inoremap <silent> jj <ESC>
 augroup source-vimrc
   autocmd!
   autocmd BufWritePost *vimrc source $MYVIMRC | set foldmethod=marker
-  autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC
+  " autocmd BufWritePost *gvimrc if has('gui_running') source $MYGVIMRC 必要なさそう
 augroup END
 
+" //////////////
+" plugin
+" //////////////
 call plug#begin('~/.vim/plugged')
-
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'} 補完重い
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
-Plug 'tomtom/tcomment_vim'
 
+" " Comment out
+Plug 'tomtom/tcomment_vim'
+"
+" Open github
+Plug 'tyru/open-browser.vim'
+Plug 'tyru/open-browser-github.vim'
+
+" rspec syntax highlighting
+Plug 'keith/rspec.vim'
 call plug#end()
 
+" //////////////
 " custom key map
+" //////////////
 
 let mapleader = "\<Space>"
 
@@ -56,6 +68,6 @@ noremap <S-h> ^
 nnoremap x "_x
 
 let g:indent_guides_enable_on_vim_startup = 1
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3 キー入力遅い原因
+" autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
