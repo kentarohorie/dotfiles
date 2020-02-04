@@ -21,6 +21,8 @@ set backspace=indent,eol,start " for using delete on newer vim
 set wildmode=list:longest
 set whichwrap=b,s,h,l,<,>,[,]
 
+set directory=/tmp
+
 inoremap <silent> jj <ESC>
 
 augroup source-vimrc
