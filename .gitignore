@@ -1,3 +1,5 @@
 .netrwhist
 plugged
+bash/plugins/*
+!bash/plugins/.keep
 
