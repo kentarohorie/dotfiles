@@ -52,6 +52,9 @@ Plug 'tyru/open-browser-github.vim'
 
 " rspec syntax highlighting
 Plug 'keith/rspec.vim'
+
+" terraform syntax
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " //////////////
@@ -59,6 +62,8 @@ call plug#end()
 " //////////////
 
 let mapleader = "\<Space>"
+let g:terraform_align=1
+" let g:terraform_fold_sections=1
 
 nnoremap <C-v> :<C-u>vsplit<CR>
 nnoremap <Leader>p :<C-u>Files<CR>
