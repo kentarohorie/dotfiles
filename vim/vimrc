@@ -50,6 +50,9 @@ Plug 'tomtom/tcomment_vim'
 Plug 'tyru/open-browser.vim'
 Plug 'tyru/open-browser-github.vim'
 
+" jsonnet hightlighting
+Plug 'google/vim-jsonnet'
+
 " rspec syntax highlighting
 Plug 'keith/rspec.vim'
 
@@ -78,3 +81,5 @@ let g:indent_guides_enable_on_vim_startup = 1
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=red   ctermbg=3 キー入力遅い原因
 " autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=green ctermbg=4
 
+" use indent for pu
+autocmd BufRead,BufNewFile *.pu set expandtab!
