@@ -1,12 +1,23 @@
+#!/bin/bash
+set -ex
+
 cd `dirname $0`
+
 if [ ! -f plugins/git-completion.bash ]; then
   wget -O plugins/git-completion.bash https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 fi
 
 if [ -f ~/.bashrc ]; then
-  GIT_COMPLETION_PATH=$PWD/plugins/git-completion.bash
-  grep -q $GIT_COMPLETION_PATH ~/.bashrc || echo source $GIT_COMPLETION_PATH >> ~/.bashrc
-  grep -q source ~/.bashrc ~/.bash_profile || echo source ~/.bashrc >> ~/.bash_profile
+  export GIT_COMPLETION_PATH=$PWD/plugins/git-completion.bash
+
+  grep -q 'source ~/.bashrc' ~/.bash_profile || echo 'source ~/.bashrc' >> ~/.bash_profile
+
+  grep -q 'source `echo $GIT_COMPLETION_PATH`' ~/.bashrc || echo source `echo $GIT_COMPLETION_PATH` >> ~/.bashrc
+  grep -q 'export HISTSIZE=9999' ~/.bashrc || echo 'export HISTSIZE=9999' >> ~/.bashrc
+  grep -q 'shopt -u histappend' ~/.bashrc || echo 'shopt -u histappend' >> ~/.bashrc
+  grep -q 'PROMPT_COMMAND="update_terminal_cwd;history -a;history -c;history -r;"' ~/.bashrc || echo 'PROMPT_COMMAND="update_terminal_cwd;history -a;history -c;history -r;"' >> ~/.bashrc
+  grep -q 'HISTFILE=~/.bash_history' ~/.bashrc || echo 'HISTFILE=~/.bash_history' >> ~/.bashrc
+
 # else
   # touch ~/.bashrc
 fi
