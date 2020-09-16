@@ -1,7 +1,6 @@
 colorscheme iceberg
 
-filetype plugin on 
-" syntax on
+syntax on
 
 set number
 set expandtab
@@ -58,6 +57,13 @@ Plug 'keith/rspec.vim'
 
 " terraform syntax
 Plug 'hashivim/vim-terraform'
+
+" php syntax highlighting
+Plug 'StanAngeloff/php.vim'
+
+" HTML, CSS, jS
+Plug 'hail2u/vim-css3-syntax'
+
 call plug#end()
 
 " //////////////
@@ -71,6 +77,9 @@ let g:terraform_align=1
 nnoremap <C-v> :<C-u>vsplit<CR>
 nnoremap <Leader>p :<C-u>Files<CR>
 nnoremap <Leader>o :<C-u>Ex<CR>
+nnoremap <Leader>i :<C-u>Ag<CR>
+nnoremap <Leader>u :<C-u>OpenGithubFile<CR>
+vmap <Leader>u :<C-u>'<,'>OpenGithubFile<CR>
 nnoremap <Leader>s :<C-u>w<CR>
 nnoremap <Leader>q :<C-u>q<CR>
 noremap <S-l> $
@@ -83,3 +92,16 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " use indent for pu
 autocmd BufRead,BufNewFile *.pu set expandtab!
+
+" php, html
+" $VIMRUNTIME/syntax/php.vim
+let g:php_baselib       = 1
+let g:php_htmlInStrings = 1
+let g:php_noShortTags   = 1
+let g:php_sql_query     = 1
+let php_parent_error_close  = 1
+highlight Pmenu ctermbg=4
+highlight PmenuSel ctermbg=1
+highlight PMenuSbar ctermbg=4
+
+filetype plugin on
