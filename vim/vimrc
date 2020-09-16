@@ -64,6 +64,9 @@ Plug 'StanAngeloff/php.vim'
 " HTML, CSS, jS
 Plug 'hail2u/vim-css3-syntax'
 
+" ruby slim syntax
+Plug 'slim-template/vim-slim'
+
 call plug#end()
 
 " //////////////
