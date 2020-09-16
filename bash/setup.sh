@@ -12,6 +12,7 @@ if [ -f ~/.bashrc ]; then
 
   grep -q 'source ~/.bashrc' ~/.bash_profile || echo 'source ~/.bashrc' >> ~/.bash_profile
 
+# [ -f ~/.fzf.bash ] && source ~/.fzf.bash
   grep -q 'source `echo $GIT_COMPLETION_PATH`' ~/.bashrc || echo source `echo $GIT_COMPLETION_PATH` >> ~/.bashrc
   grep -q 'export HISTSIZE=9999' ~/.bashrc || echo 'export HISTSIZE=9999' >> ~/.bashrc
   grep -q 'shopt -u histappend' ~/.bashrc || echo 'shopt -u histappend' >> ~/.bashrc
