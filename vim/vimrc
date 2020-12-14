@@ -66,6 +66,9 @@ Plug 'hail2u/vim-css3-syntax'
 
 " ruby slim syntax
 Plug 'slim-template/vim-slim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'jparise/vim-graphql'
 
 call plug#end()
 
