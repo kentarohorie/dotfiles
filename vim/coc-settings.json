@@ -2,5 +2,12 @@
   "languageserver": {},
   "coc.preferences.formatOnSaveFiletypes": [
     "json"
+  ],
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "javascriptreact",
+    "typescriptreact"
   ]
 }
