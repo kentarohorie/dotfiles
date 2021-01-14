@@ -22,3 +22,7 @@ if [ -f ~/.bashrc ]; then
 # else
   # touch ~/.bashrc
 fi
+
+# brew install for vim plugins.
+# https://github.com/charmbracelet/glow
+brew install grow
