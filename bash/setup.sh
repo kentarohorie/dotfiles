@@ -18,6 +18,7 @@ if [ -f ~/.bashrc ]; then
   grep -q 'shopt -u histappend' ~/.bashrc || echo 'shopt -u histappend' >> ~/.bashrc
   grep -q 'PROMPT_COMMAND="update_terminal_cwd;history -a;history -c;history -r;"' ~/.bashrc || echo 'PROMPT_COMMAND="update_terminal_cwd;history -a;history -c;history -r;"' >> ~/.bashrc
   grep -q 'HISTFILE=~/.bash_history' ~/.bashrc || echo 'HISTFILE=~/.bash_history' >> ~/.bashrc
+  grep -q 'export FZF_DEFAULT_COMMAND="fd --type f"' ~/.bashrc || echo 'export FZF_DEFAULT_COMMAND="fd --type f"' >> ~/.bashrc
 
 # else
   # touch ~/.bashrc
