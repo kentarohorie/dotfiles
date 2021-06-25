@@ -111,9 +111,6 @@ augroup END
 call plug#begin('~/.vim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Plug 'neoclide/coc.nvim', {'branch': 'release'} 補完重い
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
-" Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 
@@ -141,6 +138,7 @@ Plug 'hail2u/vim-css3-syntax'
 
 " ruby slim syntax
 Plug 'slim-template/vim-slim'
+
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'jparise/vim-graphql'
