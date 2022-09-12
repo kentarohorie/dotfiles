@@ -3,3 +3,4 @@ plugged
 bash/plugins/*
 !bash/plugins/.keep
 
+.DS_Store
