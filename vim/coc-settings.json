@@ -1,9 +1,20 @@
 {
   "eslint.autoFixOnSave": true,
-  "eslint.filetypes": [
+  "stylelintplus.autoFixOnSave": true,
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
+  "graphql.filetypes": ["graphql"],
+  "tsserver.enableJavascript": true,
+  "json.format.enable": true,
+  "coc.preferences.formatOnSaveFiletypes": [
+    "css",
+    "html",
     "javascript",
+    "javascript.jsx",
+    "json",
     "typescript",
-    "javascriptreact",
-    "typescriptreact"
+    "typescript.tsx",
+    "typescriptreact",
+    "vue",
+    "prisma"
   ]
 }

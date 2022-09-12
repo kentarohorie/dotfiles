@@ -1,5 +1,8 @@
 colorscheme iceberg
 
+set fileformats=unix,dos,mac " 改行コード
+set encoding=utf-8
+
 syntax on
 
 " ================
@@ -112,8 +115,8 @@ augroup END
 " plugin
 " //////////////
 call plug#begin('~/.vim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': './install --all' } | Plug 'junegunn/fzf.vim'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'nathanaelkane/vim-indent-guides'
 
@@ -160,6 +163,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " nginx hightlight
 Plug 'chr4/nginx.vim'
+" schema.prisma highlight
+Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
 
@@ -210,11 +215,15 @@ highlight Pmenu ctermbg=4
 highlight PmenuSel ctermbg=1
 highlight PMenuSbar ctermbg=4
 
-" 挿入モード時に非点滅の縦棒タイプのカーソル
-let &t_SI .= "\e[6 q"
-" ノーマルモード時に非点滅のブロックタイプのカーソル
-let &t_EI .= "\e[6 q"
-" 置換モード時に非点滅の下線タイプのカーソル
-let &t_SR .= "\e[6 q"
+if has('vim_starting')
+    let &t_SI .= "\e[6 q"
+    let &t_EI .= "\e[6 q"
+    let &t_SR .= "\e[6 q"
+endif
 
 filetype plugin on
+
+au BufEnter,BufNew *.php :set filetype=html
+
+" markdownのときに補完をoff
+autocmd FileType markdown let b:coc_suggest_disable = 1

@@ -26,4 +26,7 @@ fi
 
 # brew install for vim plugins.
 # https://github.com/charmbracelet/glow
-brew install grow
+brew install glow
+
+# https://github.com/junegunn/fzf#respecting-gitignore
+brew install fd
