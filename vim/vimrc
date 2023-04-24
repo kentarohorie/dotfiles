@@ -180,6 +180,8 @@ Plug 'chr4/nginx.vim'
 " schema.prisma highlight
 Plug 'pantharshit00/vim-prisma'
 
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 call plug#end()
 
 " //////////////
@@ -241,3 +243,4 @@ au BufEnter,BufNew *.php :set filetype=html
 
 " markdownのときに補完をoff
 autocmd FileType markdown let b:coc_suggest_disable = 1
+autocmd FileType text let b:coc_suggest_disable = 1

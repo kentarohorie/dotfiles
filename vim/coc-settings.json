@@ -1,6 +1,7 @@
 {
   "suggest.noselect": true,
   "eslint.autoFixOnSave": true,
+  "eslint.workingDirectories": true,
   "stylelintplus.autoFixOnSave": true,
   "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
   "graphql.filetypes": ["graphql"],
